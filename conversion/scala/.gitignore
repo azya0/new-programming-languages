@@ -1,0 +1,8 @@
+*
+!.gitignore
+!/source/
+!/source/*.scala
+!/input/
+!/input/example.csv
+!Dockerfile
+!build.sbt

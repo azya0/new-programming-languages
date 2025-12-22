@@ -35,3 +35,9 @@ services:
     volumes:
       - ./conversion/elixir/input:/app/input:ro
       - ./conversion/elixir/output:/app/output:wo
+
+  scala:
+    build: ./conversion/scala
+    volumes:
+      - ./conversion/scala/input:/app/input:ro
+      - ./conversion/scala/output:/app/output:wo
