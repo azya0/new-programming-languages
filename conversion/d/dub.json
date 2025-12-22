@@ -1,0 +1,10 @@
+{
+    "name": "yaml-to-toml",
+    "targetType": "executable",
+    "sourceFiles": ["main.d"],
+    "mainSourceFile": "main.d",
+    "dependencies":
+    {
+        "dyaml": "*"
+    }
+}
