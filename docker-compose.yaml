@@ -10,3 +10,8 @@ services:
     build: ./multithreading/erlang
     cpus: 8
     restart: no
+  
+  julia:
+    build: ./multithreading/julia
+    cpus: 8
+    restart: no
