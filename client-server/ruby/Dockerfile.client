@@ -1,0 +1,7 @@
+FROM ruby:3.2-alpine
+
+WORKDIR /app
+
+COPY ../source/client.rb .
+
+CMD ["ruby", "client.rb"]

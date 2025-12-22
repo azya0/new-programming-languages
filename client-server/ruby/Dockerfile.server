@@ -1,0 +1,11 @@
+FROM ruby:3.2-alpine
+
+RUN apk add --no-cache build-base
+
+WORKDIR /app
+
+COPY ../source/server.rb .
+
+EXPOSE 2000
+
+CMD ["ruby", "server.rb"]

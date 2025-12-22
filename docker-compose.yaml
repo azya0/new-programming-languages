@@ -1,4 +1,6 @@
-version: '3.8'
+networks:
+  hangman-network:
+    driver: bridge
 
 services:
   rust:
@@ -41,3 +43,26 @@ services:
     volumes:
       - ./conversion/scala/input:/app/input:ro
       - ./conversion/scala/output:/app/output:wo
+
+  ruby-server:
+    build:
+      context: ./client-server/ruby
+      dockerfile: Dockerfile.server
+    container_name: ruby-server
+    ports:
+      - "2000:2000"
+    networks:
+      - hangman-network
+
+  ruby-client:
+    build:
+      context: ./client-server/ruby
+      dockerfile: Dockerfile.client
+    container_name: ruby-client
+    networks:
+      - hangman-network
+    depends_on:
+      - ruby-server
+    stdin_open: true
+    tty: true
+  
