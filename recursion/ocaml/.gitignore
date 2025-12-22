@@ -1,0 +1,7 @@
+*
+!.gitignore
+!/source/
+!/source/*.ml
+!/input/
+!/input/input.txt
+!Dockerfile

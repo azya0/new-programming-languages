@@ -19,3 +19,9 @@ services:
   haskell:
     build: ./recursion/haskell
     restart: no
+
+  ocaml:
+    build: ./recursion/ocaml
+    volumes:
+      - ./recursion/ocaml/input:/app/input:ro
+    restart: no
