@@ -1,0 +1,6 @@
+*
+!.gitignore
+!/source/
+!/source/*.rs
+!Dockerfile
+!Cargo.toml
