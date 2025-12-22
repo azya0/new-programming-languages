@@ -1,0 +1,7 @@
+*
+!.gitignore
+!/source/
+!/source/main.exs
+!/input/
+!/input/*.xml
+!Dockerfile

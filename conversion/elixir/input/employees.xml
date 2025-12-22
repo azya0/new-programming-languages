@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<company name="TechCorp Inc.">
+  <department id="dept-001" name="Engineering">
+    <employee id="emp-001" type="full-time">
+      <name>John Smith</name>
+      <position>Senior Developer</position>
+      <salary currency="USD">95000</salary>
+      <hire_date>2020-03-15</hire_date>
+      <email>john.smith@techcorp.com</email>
+      <skills>
+        <skill level="expert">Python</skill>
+        <skill level="advanced">JavaScript</skill>
+        <skill level="intermediate">Docker</skill>
+      </skills>
+    </employee>
+    <employee id="emp-002" type="full-time">
+      <name>Maria Garcia</name>
+      <position>DevOps Engineer</position>
+      <salary currency="USD">110000</salary>
+      <hire_date>2019-07-22</hire_date>
+      <email>maria.garcia@techcorp.com</email>
+      <skills>
+        <skill level="expert">AWS</skill>
+        <skill level="advanced">Kubernetes</skill>
+        <skill level="intermediate">Terraform</skill>
+      </skills>
+    </employee>
+  </department>
+  <department id="dept-002" name="Marketing">
+    <employee id="emp-003" type="part-time">
+      <name>David Chen</name>
+      <position>Marketing Specialist</position>
+      <salary currency="USD">65000</salary>
+      <hire_date>2021-11-10</hire_date>
+      <email>david.chen@techcorp.com</email>
+      <skills>
+        <skill level="advanced">SEO</skill>
+        <skill level="intermediate">Google Analytics</skill>
+      </skills>
+    </employee>
+  </department>
+</company>

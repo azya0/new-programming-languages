@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<orders store="Online Shop" date="2024-01-15">
+  <order id="ORD-001" customer_id="CUST-123">
+    <customer>
+      <name>Alice Johnson</name>
+      <email>alice.johnson@example.com</email>
+      <phone>+1-555-1234</phone>
+    </customer>
+    <items>
+      <item sku="LAP-001" quantity="1">
+        <name>Gaming Laptop</name>
+        <price>1299.99</price>
+        <category>Electronics</category>
+      </item>
+      <item sku="ACC-005" quantity="2">
+        <name>Wireless Mouse</name>
+        <price>29.99</price>
+        <category>Accessories</category>
+      </item>
+    </items>
+    <shipping method="express" cost="15.99">
+      <address>
+        <street>123 Main St</street>
+        <city>New York</city>
+        <zip>10001</zip>
+        <country>USA</country>
+      </address>
+    </shipping>
+    <payment method="credit_card" status="completed">
+      <total>1374.96</total>
+      <tax>82.50</tax>
+    </payment>
+  </order>
+  
+  <order id="ORD-002" customer_id="CUST-456">
+    <customer>
+      <name>Bob Wilson</name>
+      <email>bob.wilson@example.com</email>
+      <phone>+1-555-5678</phone>
+    </customer>
+    <items>
+      <item sku="BOOK-007" quantity="3">
+        <name>Programming Elixir</name>
+        <price>39.99</price>
+        <category>Books</category>
+      </item>
+    </items>
+    <shipping method="standard" cost="5.99">
+      <address>
+        <street>456 Oak Ave</street>
+        <city>Los Angeles</city>
+        <zip>90001</zip>
+        <country>USA</country>
+      </address>
+    </shipping>
+    <payment method="paypal" status="pending">
+      <total>125.96</total>
+      <tax>7.56</tax>
+    </payment>
+  </order>
+</orders>

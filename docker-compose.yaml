@@ -29,3 +29,9 @@ services:
   lisp:
     build: ./recursion/lisp
     restart: no
+
+  elixir:
+    build: ./conversion/elixir
+    volumes:
+      - ./conversion/elixir/input:/app/input:ro
+      - ./conversion/elixir/output:/app/output:wo

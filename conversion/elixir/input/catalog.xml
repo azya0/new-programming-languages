@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <book id="bk001" category="fiction">
+    <title>The Great Gatsby</title>
+    <author>F. Scott Fitzgerald</author>
+    <year>1925</year>
+    <price currency="USD">12.99</price>
+    <description>A classic novel of the Jazz Age.</description>
+    <tags>
+      <tag>classic</tag>
+      <tag>american</tag>
+      <tag>novel</tag>
+    </tags>
+  </book>
+  <book id="bk002" category="science">
+    <title>A Brief History of Time</title>
+    <author>Stephen Hawking</author>
+    <year>1988</year>
+    <price currency="GBP">9.99</price>
+    <description>From the Big Bang to Black Holes</description>
+    <tags>
+      <tag>science</tag>
+      <tag>physics</tag>
+      <tag>cosmology</tag>
+    </tags>
+  </book>
+  <book id="bk003" category="fantasy">
+    <title>The Hobbit</title>
+    <author>J.R.R. Tolkien</author>
+    <year>1937</year>
+    <price currency="EUR">14.50</price>
+    <description>There and Back Again</description>
+    <tags>
+      <tag>fantasy</tag>
+      <tag>adventure</tag>
+    </tags>
+  </book>
+</catalog>
