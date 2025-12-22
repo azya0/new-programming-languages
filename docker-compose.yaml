@@ -15,3 +15,7 @@ services:
     build: ./multithreading/julia
     cpus: 8
     restart: no
+  
+  haskell:
+    build: ./recursion/haskell
+    restart: no
