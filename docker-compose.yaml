@@ -1,0 +1,7 @@
+version: '3.8'
+
+services:
+  rust:
+    build: ./multithreading/rust
+    cpus: 8
+    restart: no
