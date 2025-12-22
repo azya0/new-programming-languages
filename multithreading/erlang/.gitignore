@@ -1,0 +1,6 @@
+*
+!.gitignore
+!/source/
+!/source/*.erl
+!/source/supervisor_workers.app.src
+!Dockerfile

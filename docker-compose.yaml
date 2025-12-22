@@ -5,3 +5,8 @@ services:
     build: ./multithreading/rust
     cpus: 8
     restart: no
+
+  erlang:
+    build: ./multithreading/erlang
+    cpus: 8
+    restart: no

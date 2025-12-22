@@ -1,0 +1,8 @@
+{application, supervisor_workers,
+ [{description, "Supervisor with workers pool"},
+  {vsn, "1.0.0"},
+  {registered, []},
+  {mod, {app, []}},
+  {applications, [kernel, stdlib]},
+  {env, []},
+  {modules, [supervisor_workers, worker, app]}]}.
