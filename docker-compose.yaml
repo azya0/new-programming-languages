@@ -66,3 +66,9 @@ services:
     stdin_open: true
     tty: true
   
+  groovy:
+    build: ./data-parsing/groovy
+    volumes:
+      - ./data-parsing/groovy/input:/app/input:ro
+    restart: no
+  
