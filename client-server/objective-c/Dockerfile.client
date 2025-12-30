@@ -1,0 +1,24 @@
+FROM debian:stable-slim
+
+RUN apt-get update && apt-get install -y \
+    clang gcc gobjc \
+    gnustep-devel make \
+    libgnustep-base-dev \
+    libblocksruntime-dev \ 
+    libobjc-12-dev \
+    libxml2-dev \
+    && rm -rf /var/lib/apt/lists/* \
+    && mkdir -p /usr/include/objc \
+    && ln -sf /usr/include/Block.h /usr/include/objc/blocks_runtime.h
+
+WORKDIR /app
+
+COPY source/client.m .
+
+RUN clang `gnustep-config --objc-flags` \
+    -I"$(gcc -print-file-name=include)" \
+    -fblocks \
+    client.m -o app \
+    `gnustep-config --base-libs` -lBlocksRuntime
+
+CMD ["./app", "objective-c-server", "test-string-with-length-26"]

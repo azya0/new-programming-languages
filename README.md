@@ -60,11 +60,11 @@
 
 Запустите сервер в фоновом режиме:
 
-```docker-compose up ruby-server -d```
+```docker compose up ruby-server -d```
 
 Запустите клиент в интерактивном режиме:
 
-```docker-compose run --rm ruby-client```
+```docker compose run --rm ruby-client```
 
 Играйте:
 
@@ -78,13 +78,25 @@
 
 Запустите сервер в фоновом режиме:
 
-```docker-compose up lua-server -d```
+```docker compose up lua-server -d```
+
+Запустите клиент:
+
+```docker compose up lua-client```
+
+Результат записывается в ```output/responses.txt```
+
+### Objective-c - получить размер передаваемой на сервер строки
+
+Клиент при вызове ввида ```./app <host> <string>``` отправляет строку на 2000 порт сервера ```<host>``` строку ```string``` и выводит ответ сервера.
+
+Запустите сервер в фоновом режиме:
+
+```docker compose up objective-c-server -d```
 
 Запустите клиент в интерактивном режиме:
 
-```docker-compose up lua-client```
-
-Результат записывается в ```output/responses.txt```
+```docker compose up objective-c-client```
 
 ## 5. Дата-парсинг
 

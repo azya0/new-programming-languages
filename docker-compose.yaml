@@ -3,6 +3,9 @@ networks:
     driver: bridge
   auth-network:
     driver: bridge
+  string-network:
+    driver: bridge
+
 
 services:
   rust:
@@ -96,3 +99,23 @@ services:
     volumes:
       - ./client-server/lua/input:/app/input:ro
       - ./client-server/lua/output:/app/output:wo
+  
+  objective-c-server:
+    build:
+      context: ./client-server/objective-c
+      dockerfile: Dockerfile.server
+    container_name: objective-c-server
+    ports:
+      - "2000:2000"
+    networks:
+      - string-network
+
+  objective-c-client:
+    build:
+      context: ./client-server/objective-c
+      dockerfile: Dockerfile.client
+    container_name: objective-c-client
+    networks:
+      - string-network
+    depends_on:
+      - objective-c-server
