@@ -1,0 +1,3 @@
+thermo1:key123
+light1:key456  
+lock1:key789

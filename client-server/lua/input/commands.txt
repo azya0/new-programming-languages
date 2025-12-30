@@ -1,0 +1,4 @@
+STATUS|temperature=23.5
+GET_STATUS
+PING
+EXIT

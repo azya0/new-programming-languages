@@ -1,0 +1,16 @@
+FROM ubuntu:22.04
+
+RUN apt-get update && apt-get install -y \
+    lua5.4 \
+    lua5.4-dev \
+    luarocks \
+    libssl-dev \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN luarocks install luasocket
+
+WORKDIR /app
+
+COPY source/client.lua .
+
+CMD ["lua", "client.lua"]

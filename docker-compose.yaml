@@ -1,6 +1,8 @@
 networks:
   hangman-network:
     driver: bridge
+  auth-network:
+    driver: bridge
 
 services:
   rust:
@@ -72,3 +74,25 @@ services:
       - ./data-parsing/groovy/input:/app/input:ro
     restart: no
   
+  lua-server:
+    build:
+      context: ./client-server/lua
+      dockerfile: Dockerfile.server
+    container_name: lua-server
+    ports:
+      - "2000:2000"
+    networks:
+      - auth-network
+  
+  lua-client:
+    build:
+      context: ./client-server/lua
+      dockerfile: Dockerfile.client
+    container_name: lua-client
+    networks:
+      - auth-network
+    depends_on:
+      - lua-server
+    volumes:
+      - ./client-server/lua/input:/app/input:ro
+      - ./client-server/lua/output:/app/output:wo
