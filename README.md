@@ -132,3 +132,20 @@ docker run swift "12/25/2023" "Asia/Tokyo"
 ```
 docker run swift "Mon, 25 Dec 2023 15:30:00 +0300" "Australia/Sydney"
 ```
+
+### SML - обработка логов API (формат логов FastApi)
+
+Пример логов:
+
+```
+127.0.0.1 - frank [10/Oct/2000:13:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
+127.0.0.1 - mary [10/Oct/2000:14:55:36 -0700] "POST /login HTTP/1.0" 401 128
+127.0.0.1 - john [10/Oct/2000:15:55:36 -0700] "GET /index.html HTTP/1.0" 200 4321
+127.0.0.1 - frank [10/Oct/2000:16:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
+127.0.0.1 - admin [10/Oct/2000:17:55:36 -0700] "GET /admin HTTP/1.1" 403 512
+127.0.0.1 - mary [10/Oct/2000:18:55:36 -0700] "GET /index.html HTTP/1.0" 200 4321
+127.0.0.1 - john [10/Oct/2000:19:55:36 -0700] "GET /style.css HTTP/1.0" 200 1234
+127.0.0.1 - guest [10/Oct/2000:20:55:36 -0700] "GET /favicon.ico HTTP/1.0" 404 256
+127.0.0.1 - frank [10/Oct/2000:21:55:36 -0700] "GET /apache_pb.gif HTTP/1.0" 200 2326
+127.0.0.1 - admin [10/Oct/2000:22:55:36 -0700] "GET /index.html HTTP/1.1" 200 4321
+```

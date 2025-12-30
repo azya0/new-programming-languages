@@ -122,4 +122,8 @@ services:
 
   swift:
     build: ./data-parsing/swift
-    
+  
+  sml:
+    build: ./data-parsing/sml
+    volumes:
+      - ./data-parsing/sml/input:/app/input:ro
