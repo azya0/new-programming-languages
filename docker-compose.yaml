@@ -119,3 +119,7 @@ services:
       - string-network
     depends_on:
       - objective-c-server
+
+  swift:
+    build: ./data-parsing/swift
+    

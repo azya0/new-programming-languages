@@ -102,3 +102,33 @@
 
 ### Groovy - реализовать валидатор номеров телефона
 Реализация проверки номера на валидность и приведение его к единому общепринятому стандарту
+
+
+### Swift - 
+
+Соберите образ:
+
+```docker build -t <name> .```
+
+Запускайте образ с передачей ему аргументов:
+
+```docker run <name> <time> <time zone>```
+
+Например:
+
+```docker build -t swift .```
+
+Запуск с аргументами:
+
+```
+docker run swift "2023-12-25T15:30:00+03:00" "America/Los_Angeles"
+```
+```
+docker run swift "25.12.2023" "Europe/London"
+```
+```
+docker run swift "12/25/2023" "Asia/Tokyo"
+```
+```
+docker run swift "Mon, 25 Dec 2023 15:30:00 +0300" "Australia/Sydney"
+```
